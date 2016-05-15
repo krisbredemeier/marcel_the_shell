@@ -24,7 +24,6 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
     }
 
     if((check = check_builtins_env(shell_ac, shell_cmd, shell_env)) != NULL) {
-      free_str_arr(shell_env);
       shell_env = check;
       free_str_arr(shell_cmd);
       continue;

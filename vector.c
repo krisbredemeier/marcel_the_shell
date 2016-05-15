@@ -5,30 +5,24 @@ char **copy_vector(char **str_arr)
 {
   int i, i2;
   char **new_arr;
-  
   if (str_arr == NULL) {
     return NULL;
   }
-
   for(i = 0; str_arr[i] != NULL; i++) {}
   if((new_arr = malloc(sizeof(char *) * (i + 1))) == NULL) {
       return NULL;
   }
-  
   for(i = 0; str_arr[i] != NULL; i++) {
-
     for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {}
     if((new_arr[i] = malloc(sizeof(char) * (i2 + 1))) == NULL) {
       free_str_arr(new_arr);
       return NULL;
     }
-
     for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
       new_arr[i][i2] = str_arr[i][i2]; 
     }
     new_arr[i][i2] = '\0';
   }
-
   new_arr[i] = NULL;
   return new_arr;
 }
@@ -36,7 +30,6 @@ char **remove_from_vector(char **str, char **str_arr)
 {
   int i, i2, i3;
   char **new_arr;
-
   if (str_arr == NULL) {
     return NULL;
   }
@@ -63,11 +56,41 @@ char **remove_from_vector(char **str, char **str_arr)
   new_arr[i3] = NULL;
   return new_arr;
 }
-int replace_in_vector(char *str, char **str_arr)
+
+char **add_to_vector(char *str, char **str_arr)
 {
+  int i, i2;
+  char **new_arr;
+  if (str_arr == NULL) {
+    return NULL;
+  }
+  for(i = 0; str_arr[i] != NULL; i++) {}
+  if((new_arr = malloc(sizeof(char *) * (i + 2))) == NULL) {
+      return NULL;
+  }
+  for(i = 0; str_arr[i] != NULL; i++) {
 
+    for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {}
+    if((new_arr[i] = malloc(sizeof(char) * (i2 + 1))) == NULL) {
+      free_str_arr(new_arr);
+      return NULL;
+    }
+    for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
+      new_arr[i][i2] = str_arr[i][i2]; 
+    }
+    new_arr[i][i2] = '\0';
+  }
+  for(i2 = 0; str[i2] != '\0'; i2++) {}
+  if((new_arr[i] = malloc(sizeof(char) * (i2 + 1))) == NULL) {
+    free_str_arr(new_arr);
+    return NULL;
+  }
+  for(i2 = 0; str[i2] != '\0'; i2++) {
+    new_arr[i][i2] = str[i2]; 
+  }
+  new_arr[i][i2] = '\0';
+  i++;
+  new_arr[i] = NULL;
+  free(str);
+  return new_arr;
 }
-/* int add_to_vector(char *str, char **str_arr) */
-/* { */
-
-/* } */

@@ -33,8 +33,7 @@ char **check_builtins_env(int, char **, char **);
 
 char **copy_vector(char **);
 char **remove_from_vector(char **, char **);
-/* int replace_in_vector(char **, char **); */
-/* int add_to_vector(char **, char **); */
+char **add_to_vector(char *, char **);
 
 /* helper functions */
 int print_char(char);

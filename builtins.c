@@ -51,31 +51,33 @@ int builtin_env(int ac,__attribute__((unused)) char **cmd, char **env) {
   return (0);
 }
 
-char **builtin_setenv(__attribute__((unused))int ac,__attribute__((unused)) char **cmd,__attribute__((unused)) char **env) {
-  /* char *new, **target;  */
-  /* if(ac > 3) { */
-  /*   print_string("'setenv' takes only two arguments\n"); */
-  /*   return NULL; */
-  /* } */
-  /* if(ac == 2 || ac == 1) { */
-  /*   print_string("'setenv' needs two arguments\n"); */
-  /*   return NULL; */
-  /* } */
+char **builtin_setenv(int ac, char **cmd, char **env) {
+  char *new, **target;
+  if(ac > 3) {
+    print_string("'setenv' takes only two arguments\n");
+    return NULL;
+  }
+  if(ac == 2 || ac == 1) {
+    print_string("'setenv' needs two arguments\n");
+    return NULL;
+  }
   
-  /* if((target = get_variable(cmd[1], env)) == NULL) { */
-  /*   print_string("***UNDER CONSTRUCTION***\n"); */
-  /*   return NULL; */
-  /* } */
-  /* else { */
-  /*   print_string("***UNDER CONSTRUCTION***\n"); */
-  /*   new = append_insert_replace(cmd[2], cmd[1], '='); */
-  /*   free(*target); */
-  /*   *target = new; */
-  /*   print_string("Run 'env' to see your changes\n"); */
-  /*   return NULL; */
-  /* } */
+  if((target = get_variable(cmd[1], env)) == NULL) {
+    new = append_insert_replace(cmd[2], cmd[1], '=');
+    target = add_to_vector(new, env);
+    free_str_arr(env);
+    print_string("Run 'env' to see your changes\n");
+    return target;
+  }
+  else {
+    new = append_insert_replace(cmd[2], cmd[1], '=');
+    free(*target);
+    *target = new;
+    print_string("Run 'env' to see your changes\n");
+    return env;
+  }
 		       
-  return (0);
+  return env;
 }
 
 char **builtin_unsetenv(int ac, char **cmd, char **env) {
@@ -93,6 +95,7 @@ char **builtin_unsetenv(int ac, char **cmd, char **env) {
   
   target = get_variable(cmd[1], env);
   new_env = remove_from_vector(target, env);
+  free_str_arr(env);
   print_string("Run 'env' to see your changes\n");
   return (new_env);
 }
