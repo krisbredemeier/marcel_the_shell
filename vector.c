@@ -34,24 +34,39 @@ char **copy_vector(char **str_arr)
 }
 char **remove_from_vector(char **str, char **str_arr)
 {
-  int i;
+  int i, i2, i3;
   char **new_arr;
 
-  *str = NULL;
-  for(i = 0; str_arr[i] != NULL; i++) {} 
-  while(str_arr[i + 1] != NULL) {
-    str_arr[i + 1] = str_arr[i];
-    i++;
+  if (str_arr == NULL) {
+    return NULL;
   }
-
-  new_arr = copy_vector(str_arr);
-  free_str_arr(str_arr);
+  for(i = 0; str_arr[i] != NULL; i++) {}
+  if((new_arr = malloc(sizeof(char *) * (i))) == NULL) {
+      return NULL;
+  }
+  for(i = 0, i3 = 0; str_arr[i] != NULL; i++, i3++) {
+    if (string_compare(*str, str_arr[i]) == 0) {
+      i3--;
+    } 
+    else {
+      for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {}
+      if((new_arr[i3] = malloc(sizeof(char) * (i2 + 1))) == NULL) {
+	free_str_arr(new_arr);
+	return NULL;
+      }
+      for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
+	new_arr[i3][i2] = str_arr[i][i2]; 
+      }
+      new_arr[i3][i2] = '\0';
+    }
+  }
+  new_arr[i3] = NULL;
   return new_arr;
 }
-/* int replace_in_vector(char *str, char **str_arr) */
-/* { */
+int replace_in_vector(char *str, char **str_arr)
+{
 
-/* } */
+}
 /* int add_to_vector(char *str, char **str_arr) */
 /* { */
 
