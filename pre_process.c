@@ -28,14 +28,14 @@ char *first_in_string(char c, char *str)
 	return NULL;
 }
 
-int pre_process_variables(int ac, char **cmd, char **env) {
-  int i;
+/* int pre_process_variables(int ac, char **cmd, char **env) { */
+/*   int i; */
   
-  for(i = 0; i < c; i++) {
-    if(
-  }
+/*   for(i = 0; i < c; i++) { */
+/*     if( */
+/*   } */
 
-  return (0);
-}
+/*   return (0); */
+/* } */
 
 
