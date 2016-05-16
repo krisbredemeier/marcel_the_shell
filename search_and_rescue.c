@@ -34,9 +34,9 @@ char *find_command(char *exec, char **env)
         struct stat stat_strut;
         int i;
 
-	if(exec[0] == '.' || exec[0] == '/') {
-	        return exec;
-	}
+        if(exec[0] == '.' || exec[0] == '/') {
+               return exec;
+        }
 
         path = search_and_rescue("PATH", env);
         dir_arr = string_split(path, ':');
@@ -46,8 +46,8 @@ char *find_command(char *exec, char **env)
 
                 if ((stat(dir_path, &stat_strut)) == 0) {
                         free(exec);
-			free(dir_arr);
-			print_string(dir_path);
+                        free(dir_arr);
+                        print_string(dir_path);
                         return dir_path;
                 }
                 free(dir_path);
