@@ -1,0 +1,22 @@
+M = marcel_the_shell
+N = Narrator
+
+M - I used to have a sister
+N - What happened to her?
+M - Someone asked her to hold a balloon.
+
+M - Guess why I smile a lot.
+N - Why?
+M - Uh, because it's worth it.
+
+M - Guess what I use for a bed.
+N - What?
+M - A piece of bread.
+
+M - Guess what I use for a car.
+N - What?
+M - A bug.
+
+M - Guess what I use for a hat.
+N - What?
+M - A lentil. 
