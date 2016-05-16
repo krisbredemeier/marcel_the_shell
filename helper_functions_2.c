@@ -1,3 +1,4 @@
+/*these functions are helper functions*/
 #include "shell_head.h"
 #include "shell_builtins.h"
 
