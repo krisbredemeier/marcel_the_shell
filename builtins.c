@@ -1,6 +1,7 @@
 #include "shell_head.h"
 #include "shell_builtins.h"
 
+/*creates a built in exit command*/
 int builtin_exit(int ac, char **cmd, __attribute__((unused)) char **env) {
   int i;
   char *check;
@@ -25,7 +26,7 @@ int builtin_exit(int ac, char **cmd, __attribute__((unused)) char **env) {
   i = string_to_integer(cmd[1]);
   free_str_arr(env);
   free_str_arr(cmd);
-  exit(i);  
+  exit(i);
 }
 
 int builtin_cd(int ac, char **cmd, __attribute__((unused)) char **env) {
@@ -47,7 +48,7 @@ int builtin_env(int ac,__attribute__((unused)) char **cmd, char **env) {
     print_string(env[i]);
     print_char('\n');
   }
-  
+
   return (0);
 }
 
@@ -61,7 +62,7 @@ char **builtin_setenv(__attribute__((unused))int ac,__attribute__((unused)) char
   /*   print_string("'setenv' needs two arguments\n"); */
   /*   return NULL; */
   /* } */
-  
+
   /* if((target = get_variable(cmd[1], env)) == NULL) { */
   /*   print_string("***UNDER CONSTRUCTION***\n"); */
   /*   return NULL; */
@@ -74,7 +75,7 @@ char **builtin_setenv(__attribute__((unused))int ac,__attribute__((unused)) char
   /*   print_string("Run 'env' to see your changes\n"); */
   /*   return NULL; */
   /* } */
-		       
+
   return (0);
 }
 
@@ -90,7 +91,7 @@ char **builtin_unsetenv(int ac, char **cmd, char **env) {
     print_string("'unsetenv' needs one argument\n");
     return NULL;
   }
-  
+
   target = get_variable(cmd[1], env);
   new_env = remove_from_vector(target, env);
   print_string("Run 'env' to see your changes\n");
