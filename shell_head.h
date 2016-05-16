@@ -13,6 +13,8 @@
 
 char *read_line(int);
 void copy_string(char *, char *, int);
+int pre_process(char *);
+char *first_in_string(char, char *);
 
 char **string_split(char *, char);
 int count_chars(char *, char);

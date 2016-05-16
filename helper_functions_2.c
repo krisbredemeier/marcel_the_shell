@@ -1,4 +1,4 @@
-/*these functions are helper functions*/
+/* these functions are helper functions */
 #include "shell_head.h"
 #include "shell_builtins.h"
 
@@ -80,7 +80,7 @@ int expon(int n)
         return x;
 }
 
-/*function compares str1 to str2, and returns an int*/
+/* function compares str1 to str2, and returns an int */
 int string_compare(char *str1, char *str2)
 {
         int i;

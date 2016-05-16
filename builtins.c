@@ -1,7 +1,7 @@
 #include "shell_head.h"
 #include "shell_builtins.h"
 
-/*creates a built in exit command*/
+/* creates a built in exit command */
 int builtin_exit(int ac, char **cmd, __attribute__((unused)) char **env)
 {
         int i;
@@ -49,7 +49,7 @@ int builtin_cd(int ac, char **cmd, char **env)
         }
 }
 
-int builtin_env(int ac,__attribute__((unused)) char **cmd, char **env)
+int builtin_env(int ac, __attribute__((unused)) char **cmd, char **env)
 {
         int i;
 

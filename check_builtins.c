@@ -2,7 +2,8 @@
 #include "shell_builtins.h"
 
 /*
-* check_builtin() recieves a string vector, and checks if the first element matches the
+* check_builtin() recieves a string vector,
+* and checks if the first element matches the
 * name of any builtin commands. If found, it will execute the match's
 * respective function and return
 * the result of that function. If not found, it will return (-1).

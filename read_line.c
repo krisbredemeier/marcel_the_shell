@@ -3,7 +3,7 @@
 #define PROMPT_SIZE 4
 #define BUFF_SIZE 5
 
-/*this function reads commands the user types into marcel_the_shell*/
+/* this function reads commands the user types into marcel_the_shell */
 char *read_line(int fd)
 {
         char *bf, *temp;

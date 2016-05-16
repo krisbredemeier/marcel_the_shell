@@ -38,11 +38,11 @@ int execute_command(char **cmd, char **env)
                 do {
                         child_exit = waitpid(pid, &status, WUNTRACED);
                         if (child_exit == -1) {
-            	perror("bad waitpid");
-            	free_str_arr(env);
-            	free_str_arr(cmd);
-            	exit(EXIT_FAILURE);
-                  }
+                              	perror("bad waitpid");
+                              	free_str_arr(env);
+                              	free_str_arr(cmd);
+                              	exit(EXIT_FAILURE);
+                                }
                 } while (!WIFEXITED(status) && !WIFSIGNALED(status));
 
                 return(EXIT_SUCCESS);
