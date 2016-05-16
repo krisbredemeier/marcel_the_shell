@@ -16,7 +16,7 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
 
   while(TRUE) {
     input = read_line(0);
-    if((error = pre_process(input)) == 1) {
+    if((error = pre_process_comments(input)) == 1) {
       free(input);
       continue;
     }
