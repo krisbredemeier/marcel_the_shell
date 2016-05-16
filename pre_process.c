@@ -25,7 +25,6 @@ char *first_in_string(char c, char *str)
                        return &(str[i]);
                 }
         }
-
         return NULL;
 }
 

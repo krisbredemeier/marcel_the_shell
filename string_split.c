@@ -39,7 +39,6 @@ char **string_split(char *s, char seperator)
                             i3++;
                   }
         }
-
         ss[i] = NULL;
         return ss;
 }

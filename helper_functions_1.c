@@ -19,6 +19,7 @@ void print_number(int n)
         int i = 1;
         int temp;
         int mod = 1;
+        
         if (n < 0) {
                 print_char('-');
                 mod = -1;

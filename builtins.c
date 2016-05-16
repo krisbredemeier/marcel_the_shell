@@ -61,7 +61,6 @@ int builtin_env(int ac, __attribute__((unused)) char **cmd, char **env)
                 print_string(env[i]);
                 print_char('\n');
         }
-
         return (0);
 }
 
@@ -92,7 +91,6 @@ char **builtin_setenv(int ac, char **cmd, char **env)
                 print_string("Run 'env' to see your changes\n");
                 return env;
         }
-
         return env;
 }
 

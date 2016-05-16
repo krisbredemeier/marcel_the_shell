@@ -22,13 +22,11 @@ char *read_line(int fd)
                         perror("read bad");
                         return NULL;
           }
-
           if (bf[i + size - 1] == '\n') {
                   bf[i + size - 1] = '\0';
 
                   return (bf);
           }
-
           i += size;
           temp = malloc(sizeof(char) * (i));
           copy_string(bf, temp, i);

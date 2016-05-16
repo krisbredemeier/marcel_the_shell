@@ -49,7 +49,6 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
         }
 
         exit(0);
-
 }
 
 /*

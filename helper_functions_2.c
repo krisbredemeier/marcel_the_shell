@@ -9,7 +9,6 @@ int string_to_integer(char *s)
 
         answer = 0;
         mod = 0;
-
         while (*s && (*s < '0' || *s > '9')) {
                 if (*s == '-') {
                         mod++;
@@ -32,7 +31,6 @@ int string_to_integer(char *s)
 
         cut_string(s, size, newString);
         answer = make_number(newString, size, mod);
-
         return answer;
 }
 
@@ -44,7 +42,6 @@ void cut_string(char *s, int size, char *newString)
         for (ndx = 0; ndx < size; ndx++) {
                 newString[ndx] = s[ndx];
         }
-
         newString[ndx] = '\0';
 }
 
@@ -59,12 +56,10 @@ int make_number(char *newString, int size, int mod)
         for (ndx = 0; ndx <= size; ndx++) {
                 number += ((newString[size - ndx] - '0') * expon(ndx));
         }
-
         number *= mod;
         if ((mod == 1 && number > 0) || (mod == -1 && number < 0)) {
                 return number;
         }
-
         return 0;
       }
 
@@ -73,7 +68,6 @@ int expon(int n)
         int x;
 
         x = 1;
-
         while (n--) {
                 x *= 10;
         }

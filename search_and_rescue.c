@@ -52,10 +52,8 @@ char *find_command(char *exec, char **env)
                 }
                 free(dir_path);
         }
-
         free_str_arr(dir_arr);
         return NULL;
-
 }
 
 char *append_insert_replace(char *str, char *dir, char divider)
@@ -117,6 +115,5 @@ char **get_variable(char *search, char **env)
                         return &(env[i]);
                 }
         }
-
         return NULL;
 }

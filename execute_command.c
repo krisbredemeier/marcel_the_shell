@@ -1,8 +1,8 @@
 #include "shell_head.h"
 
 /*
-*
-*
+* funcion that creates fork from parent to child
+* parent waits for child to run before parent contines
 */
 int execute_command(char **cmd, char **env)
 {
@@ -31,7 +31,6 @@ int execute_command(char **cmd, char **env)
                         free_str_arr(env);
                         exit(EXIT_FAILURE);
                 }
-
                 exit(EXIT_SUCCESS);
         }
         else {
