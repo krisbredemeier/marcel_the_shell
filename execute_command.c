@@ -27,9 +27,8 @@ int execute_command(char **cmd, char **env)
 
                 if (execve(cmd[0], cmd, env) == -1) {
                         perror("bad execve");
-			free(new);
-                        free_str_arr(env);
                         free_str_arr(cmd);
+                        free_str_arr(env);
                         exit(EXIT_FAILURE);
                 }
 
