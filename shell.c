@@ -16,6 +16,10 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
 
   while(TRUE) {
     input = read_line(0);
+    if((error = pre_process(input)) == 1) {
+      free(input);
+      continue;
+    }
     shell_ac = count_words(input, ' ');
     shell_cmd = string_split(input, ' ');
     free(input);
