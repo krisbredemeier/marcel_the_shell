@@ -1,4 +1,4 @@
-/*built-in prototypes for marcel_the_shell shell*/
+/* built-in prototypes for marcel_the_shell shell */
 typedef int (*builtin_f)(int, char **, char **);
 typedef char **(*builtin_f_env)(int, char **, char **);
 
