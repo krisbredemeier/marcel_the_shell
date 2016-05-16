@@ -47,8 +47,10 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
 
         exit(0);
 =======
-/*main function of marcel_the_shell - reads the user input, checks for builtins,
-checks for builtin environmentals, and attemps to exacute command*/
+/*
+* main function of marcel_the_shell - reads the user input, checks for builtins,
+* checks for builtin environmentals, and attemps to exacute command
+*/
 int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, char **env) {
   char **shell_cmd;
   char *input;
@@ -96,16 +98,16 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
 }
 
 /*
-*this function is a way to handle ctl_c.
+* this function is a way to handle ctl_c.
 * If ctl_c is tryped into the shell
-*you are prompted to type 'exit' to quit
+* you are prompted to type 'exit' to quit
 */
 void sig_handle_ctl_c(int sign)
 {
         char prompt[] = ">>> ";
 
         signal(sign, SIG_IGN);
-        write(1 ,"\nPlease type 'exit' to quit.\n", 29);
+        write(1 , "\nPlease type 'exit' to quit.\n", 29);
         write(1, prompt, 4);
         signal(SIGINT, sig_handle_ctl_c);
 }
