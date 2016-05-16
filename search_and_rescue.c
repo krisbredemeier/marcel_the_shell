@@ -19,6 +19,9 @@ char *search_and_rescue(char *search, char **env) {
   return NULL;
 }
 
+/*uses search_and_rescue function and string_split funtion to
+piece togethter the path and the command to find if the full path
+of the command*/
 char *find_command(char *exec, char **env) {
   char **dir_arr;
   char *dir_path;
@@ -57,9 +60,9 @@ char *append_insert_replace(char *str, char *dir, char divider) {
 
   for (i = 0; str[i] != '\0'; i++) {}
   for (i3 = 0; dir[i3] != '\0'; i3++) {}
-  
+
   new = malloc(sizeof(char) * (i3 + i + 1 + mod));
-  
+
   for (i = 0; dir[i] != '\0'; i++) {
     new[i] = dir[i];
   }
@@ -83,7 +86,7 @@ void free_str_arr(char **str_arr) {
   for (i = 0; str_arr[i] != NULL; i++) {
     free(str_arr[i]);
   }
-  
+
   free(str_arr);
 }
 
