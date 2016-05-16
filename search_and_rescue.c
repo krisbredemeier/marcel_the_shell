@@ -96,7 +96,7 @@ char **get_variable(char *search, char **env) {
 
   for(i = 0; env[i] != NULL; i++) {
     for(i2 = 0; env[i][i2] == search[i2] && env[i][i2] != '='; i2++) {}
-    if (env[i][i2] == '=') {
+    if (env[i][i2] == '=' && search[i2] == '\0') {
       return &(env[i]);
     }
   }
