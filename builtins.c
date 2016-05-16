@@ -28,12 +28,23 @@ int builtin_exit(int ac, char **cmd, __attribute__((unused)) char **env) {
   exit(i);  
 }
 
-int builtin_cd(int ac, char **cmd, __attribute__((unused)) char **env) {
-  print_string("***Still under construction***\n");
-  if(ac == 2) {
-    print_string(cmd[1]);
+int builtin_cd(int ac, char **cmd, char **env) 
+{
+  if (ac > 2) {
+    print_string("'cd' takes only up to one argument\n");
+    return(1);
+  } 
+  if (ac == 2) {
+    if (chdir(cmd[1]) != 0) {
+      perror("bad cd");
+      return (1);
+    }
+    return (0);
   }
-  return (0);
+  else {
+    chdir(search_and_rescue("HOME", env));
+    return (0);
+  }
 }
 
 int builtin_env(int ac,__attribute__((unused)) char **cmd, char **env) {

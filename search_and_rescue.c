@@ -36,6 +36,11 @@ char *find_command(char *exec, char **env) {
       free(exec);
       return dir_path;
     }
+    if ((stat(dir_path, &stat_strut)) == -1) {
+      free(dir_path);
+      free_str_arr(dir_arr);
+      return NULL;
+    }
     free(dir_path);
   }
 
