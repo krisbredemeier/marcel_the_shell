@@ -20,9 +20,11 @@ char *search_and_rescue(char *search, char **env)
         return NULL;
 }
 
-/*uses search_and_rescue function and string_split funtion to
-piece togethter the path and the command to find if the full path
-of the command*/
+/*
+* uses search_and_rescue function and string_split funtion to
+* piece togethter the path and the command to find if the full path
+* of the command
+*/
 char *find_command(char *exec, char **env)
 {
         char **dir_arr;
