@@ -27,7 +27,7 @@ char **string_split(char *s, char seperator)
                             t = ss[i2];
                             while(s[i3] != seperator && s[i3] != '\0') {
                                       *t++ = s[i3];
-                               	      i3++;
+                               i3++;
                             }
                             *t = '\0';
                             while(s[i3] == seperator && s[i3] != '\0') {
