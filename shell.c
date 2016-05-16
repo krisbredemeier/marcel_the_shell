@@ -1,7 +1,7 @@
 #include "shell_head.h"
 
 /*main function of marcel_the_shell - reads the user input, checks for builtins,
-chekcs for builtin environmentals, and attemps to exacute command*/
+checks for builtin environmentals, and attemps to exacute command*/
 int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, char **env) {
   char **shell_cmd;
   char *input;
