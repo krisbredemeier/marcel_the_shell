@@ -40,12 +40,12 @@ char *read_line(int fd)
         }
 }
 
-/*makes a copy of a string - copies each element in array from source
-string to dest strign*/
+/* makes a copy of a string - copies each element in array from source
+string to dest strign */
 void copy_string(char *source, char *dest, int n)
 {
         int i;
-        for (i = 0; i < n; i++){
+        for (i = 0; i < n; i++) {
                 dest[i] = source[i];
         }
 }
