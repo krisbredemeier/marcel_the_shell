@@ -19,7 +19,7 @@ char **copy_vector(char **str_arr)
       return NULL;
     }
     for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
-      new_arr[i][i2] = str_arr[i][i2]; 
+      new_arr[i][i2] = str_arr[i][i2];
     }
     new_arr[i][i2] = '\0';
   }
@@ -40,7 +40,7 @@ char **remove_from_vector(char **str, char **str_arr)
   for(i = 0, i3 = 0; str_arr[i] != NULL; i++, i3++) {
     if (string_compare(*str, str_arr[i]) == 0) {
       i3--;
-    } 
+    }
     else {
       for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {}
       if((new_arr[i3] = malloc(sizeof(char) * (i2 + 1))) == NULL) {
@@ -48,7 +48,7 @@ char **remove_from_vector(char **str, char **str_arr)
 	return NULL;
       }
       for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
-	new_arr[i3][i2] = str_arr[i][i2]; 
+	new_arr[i3][i2] = str_arr[i][i2];
       }
       new_arr[i3][i2] = '\0';
     }
@@ -76,7 +76,7 @@ char **add_to_vector(char *str, char **str_arr)
       return NULL;
     }
     for(i2 = 0; str_arr[i][i2] != '\0'; i2++) {
-      new_arr[i][i2] = str_arr[i][i2]; 
+      new_arr[i][i2] = str_arr[i][i2];
     }
     new_arr[i][i2] = '\0';
   }
@@ -86,7 +86,7 @@ char **add_to_vector(char *str, char **str_arr)
     return NULL;
   }
   for(i2 = 0; str[i2] != '\0'; i2++) {
-    new_arr[i][i2] = str[i2]; 
+    new_arr[i][i2] = str[i2];
   }
   new_arr[i][i2] = '\0';
   i++;
