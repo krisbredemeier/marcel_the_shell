@@ -1,0 +1,36 @@
+M = marcel_the_shell
+N = Narrator
+
+M - I used to have a sister
+N - What happened to her?
+M - Someone asked her to hold a balloon.
+
+M - Guess why I smile a lot.
+N - Why?
+M - Uh, because it's worth it.
+
+M - Guess what I use for a bed.
+N - What?
+M - A piece of bread.
+
+M - Guess what I use for a car.
+N - What?
+M - A bug.
+
+M - Guess what I ware as a hat.
+N - What?
+M - A lentil.
+
+M - One time I nibbled on a piece of cheese and my cholesterol went up to 900.
+
+M - Guess what I use to tie my skies to my car?
+N - What?
+M - A hair.
+
+M - Guess what my skis are?
+N - What?
+M - The toenails of a man.
+
+M - I came out here for the grape, and door closed, and now I'm locked out.
+N - How are you going to get back in?
+M - Well, I guess I'll just wait it out. AAANNNNDDD, that's what we are in the process of doing
