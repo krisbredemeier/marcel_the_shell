@@ -39,8 +39,10 @@ char *read_line(int fd)
 }
 
 
-/* makes a copy of a string - copies each element in array from source
-string to dest strign */
+/* makes a copy of a string -
+ * copies each element in array from source
+ * string to dest string
+ */
 void copy_string(char *source, char *dest, int n)
 {
         int i;

@@ -30,6 +30,7 @@ int builtin_exit(int ac, char **cmd, __attribute__((unused)) char **env)
         exit(i);
 }
 
+/* builtin change directory function */
 int builtin_cd(int ac, char **cmd, char **env)
 {
         if (ac > 2) {
@@ -49,6 +50,7 @@ int builtin_cd(int ac, char **cmd, char **env)
         }
 }
 
+/* builtin envonmetal veriable function */
 int builtin_env(int ac, __attribute__((unused)) char **cmd, char **env)
 {
         int i;
@@ -64,6 +66,7 @@ int builtin_env(int ac, __attribute__((unused)) char **cmd, char **env)
         return (0);
 }
 
+/* built in set environmental veriable function */
 char **builtin_setenv(int ac, char **cmd, char **env)
 {
         char *new, **target;
@@ -94,6 +97,7 @@ char **builtin_setenv(int ac, char **cmd, char **env)
         return env;
 }
 
+/* built in unset environmental veriable function */
 char **builtin_unsetenv(int ac, char **cmd, char **env)
 {
         char **target;

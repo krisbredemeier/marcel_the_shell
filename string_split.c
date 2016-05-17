@@ -56,8 +56,11 @@ int count_chars(char *s1, char seperator)
         return i;
 }
 
-/* count_words() counts how many words are in a string. A word must contain
-   alphanumerical symbols only. */
+/*
+  * count_words() counts how many words are in a string.
+ * A word must contain
+ * alphanumerical symbols only.
+ */
 int count_words(char *s, char seperator)
 {
         int i;

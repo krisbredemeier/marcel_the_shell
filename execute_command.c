@@ -1,9 +1,9 @@
 #include "shell_head.h"
 
 /*
-* funcion that creates fork from parent to child
-* parent waits for child to run before parent contines
-*/
+ * funcion that creates fork from parent to child
+ * parent waits for child to run before parent contines
+ */
 int execute_command(char **cmd, char **env)
 {
         pid_t pid, child_exit;

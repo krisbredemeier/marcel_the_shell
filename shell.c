@@ -1,11 +1,11 @@
 #include "shell_head.h"
 
 /*
-* main function of marcel_the_shell -
-* reads the user input, checks for builtins,
-* checks for builtin environmentals,
-* and attempts to execute command
-*/
+ * main function of marcel_the_shell -
+ * reads the user input, checks for builtins,
+ * checks for builtin environmentals,
+ * and attempts to execute command
+ */
 int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, char **env)
 {
         char **shell_cmd;
@@ -52,10 +52,10 @@ int main(__attribute__((unused)) int ac, __attribute__((unused)) char **argv, ch
 }
 
 /*
-* this function is a way to handle ctl_c.
-* If ctl_c is tryped into the shell
-* you are prompted to type 'exit' to quit
-*/
+ * this function is a way to handle ctl_c.
+ * If ctl_c is tryped into the shell
+ * you are prompted to type 'exit' to quit
+ */
 void sig_handle_ctl_c(int sign)
 {
         char prompt[] = ">>> ";

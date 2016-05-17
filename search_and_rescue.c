@@ -1,7 +1,9 @@
 #include "shell_head.h"
 
-/* search and rescue searches the environment variable vector for a match
-   and returns just the value of the requested variable. */
+/*
+ * search and rescue searches the environment variable vector for a match
+ * and returns just the value of the requested variable.
+ */
 char *search_and_rescue(char *search, char **env)
 {
         int i, i2;
@@ -22,10 +24,10 @@ char *search_and_rescue(char *search, char **env)
 
 
 /*
-* uses search_and_rescue function and string_split funtion to
-* piece togethter the path and the command to find if the full path
-* of the command
-*/
+ * uses search_and_rescue function and string_split funtion to
+ * piece togethter the path and the command to find if the full path
+ * of the command
+ */
 char *find_command(char *exec, char **env)
 {
         char **dir_arr;
