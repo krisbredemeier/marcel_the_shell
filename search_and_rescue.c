@@ -48,8 +48,12 @@ char *find_command(char *exec, char **env)
 
                 if ((stat(dir_path, &stat_strut)) == 0) {
                         free(exec);
+<<<<<<< HEAD
                         free(dir_arr);
                         print_string(dir_path);
+=======
+			free(dir_arr);
+>>>>>>> bd25e98a26b41a4fdf8fd3cefe485998cedefc14
                         return dir_path;
                 }
                 free(dir_path);

@@ -28,6 +28,7 @@ char *first_in_string(char c, char *str)
         return NULL;
 }
 
+<<<<<<< HEAD
 /* int pre_process_variables(int ac, char **cmd, char **env) { */
 /*   int i; */
 
@@ -37,3 +38,6 @@ char *first_in_string(char c, char *str)
 
 /*   return (0); */
 /* } */
+=======
+
+>>>>>>> bd25e98a26b41a4fdf8fd3cefe485998cedefc14
